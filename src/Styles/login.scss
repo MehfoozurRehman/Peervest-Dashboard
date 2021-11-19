@@ -146,10 +146,10 @@
   cursor: pointer;
 }
 .secondary__button:hover {
-  box-shadow: rgba(211, 152, 68, 0.5);
   transition: 300ms ease-in-out;
+  background: #7a5116;
 }
 .primary__button:hover {
   transition: 300ms ease-in-out;
-  box-shadow: rgba(10, 39, 81, 0.5);
+  background: #041733;
 }

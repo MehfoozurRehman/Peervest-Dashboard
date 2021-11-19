@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Button({ placeholder, style, className }) {
+export default function Button({ placeholder, style, className, path }) {
   return (
     <>
-      <button type="submit" className={className} style={style}>
+      <button type="submit" onClick={path} className={className} style={style}>
         {placeholder}
       </button>
     </>

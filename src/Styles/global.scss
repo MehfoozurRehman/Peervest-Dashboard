@@ -48,7 +48,7 @@ body {
 }
 .table__container__header__entry {
   width: fit-content;
-  min-width: 200px;
+  min-width: 180px;
   text-align: center;
   font-size: 14px;
   color: $whiteColor;
@@ -76,7 +76,7 @@ body {
   font-size: 14px;
   color: $textColor;
   width: fit-content;
-  min-width: 200px;
+  min-width: 180px;
   text-align: center;
 }
 .table__wrapper__heading {
@@ -84,4 +84,8 @@ body {
   color: $textColor;
   font-weight: bold;
   margin-bottom: 1em;
+}
+.entry__info__row__text__img {
+  width: 38px;
+  height: 38px;
 }

@@ -1,18 +1,36 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import tableEntryPic from "../Assets/tableEntryPic.png";
 
-function EntryInfoRowData({ value, variant, placeholder }) {
+function EntryInfoRowData({ value, variant, placeholder, path }) {
   if (variant === "btn_primary") {
     return (
       <div className="entry__info__row__text">
-        <Button placeholder={placeholder} className="primary__button" />
+        <Button
+          path={path}
+          placeholder={placeholder}
+          className="primary__button"
+        />
       </div>
     );
   } else if (variant === "btn_secondary") {
     return (
       <div className="entry__info__row__text">
-        <Button placeholder={placeholder} className="secondary__button" />
+        <Button
+          path={path}
+          placeholder={placeholder}
+          className="secondary__button"
+        />
+      </div>
+    );
+  } else if (variant === "img") {
+    return (
+      <div className="entry__info__row__text">
+        <img
+          src={tableEntryPic}
+          alt="tableEntryPic"
+          className="entry__info__row__text__img"
+        />
       </div>
     );
   } else {
@@ -44,6 +62,7 @@ export default function TableEntryRows({ tableEntryInfoRow, path }) {
               : null
           }
           placeholder={item.placeholder}
+          path={item.path}
         />
       ))}
     </div>
