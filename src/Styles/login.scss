@@ -1,0 +1,139 @@
+@import "./global.scss";
+
+.login__container {
+  width: 100vw;
+  height: 100vh;
+  background: $disabled;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login__container__content {
+  max-width: 400px;
+  width: 100%;
+  height: fit-content;
+  padding: 2em;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid $primaryColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login__container__content svg {
+  width: 160px;
+  height: 42px;
+}
+.login__container__content__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2em;
+}
+// .login__container__content__form__heading {
+//   font-size: 22px;
+//   color: #242424;
+//   font-weight: bold;
+//   margin-bottom: 1em;
+// }
+.login__container__content__form__input input {
+  display: flex;
+  width: 100%;
+  background: $disabled;
+  padding: 1em;
+  outline: none;
+  border: 1px solid $disabled;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+.login__container__content__form__input input:hover {
+  border-color: #b4b8c0;
+}
+.login__container__content__form__input input:focus {
+  border-color: $primaryColor;
+}
+.login__container__content__form__checkbox .styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  user-select: none;
+  margin-top: 1em;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 25px;
+    height: 25px;
+    background: #e9e9e9;
+    border-radius: 50px;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $primaryColor;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $primaryColor;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+.login__container__content__form__btn {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 10px;
+  border: none;
+  margin-top: 3em;
+  background: $primaryColor;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login__container__content__form__btn:hover {
+  transition: 300ms ease-in-out;
+  background: $primaryColor;
+}
