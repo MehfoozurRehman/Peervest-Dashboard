@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Components/Button";
 
 export default function Login() {
   return (
@@ -89,12 +90,7 @@ export default function Login() {
               Remember Me
             </label>
           </div>
-          <button
-            type="submit"
-            className="login__container__content__form__btn"
-          >
-            Login
-          </button>
+          <Button placeholder="Login" className="primary__button" />
         </form>
       </div>
     </div>

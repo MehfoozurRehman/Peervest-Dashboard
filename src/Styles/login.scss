@@ -53,6 +53,9 @@
 .login__container__content__form__input input:focus {
   border-color: $primaryColor;
 }
+.login__container__content__form__checkbox {
+  margin-bottom: 3em;
+}
 .login__container__content__form__checkbox .styled-checkbox {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
@@ -122,18 +125,31 @@
     transform: rotate(45deg);
   }
 }
-.login__container__content__form__btn {
-  width: 100%;
+.primary__button {
+  flex: 1;
   padding: 0.8em;
   border-radius: 10px;
   border: none;
-  margin-top: 3em;
   background: $primaryColor;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
 }
-.login__container__content__form__btn:hover {
+.secondary__button {
+  background: $secondaryColor;
+  flex: 1;
+  padding: 0.8em;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.secondary__button:hover {
+  box-shadow: rgba(211, 152, 68, 0.5);
   transition: 300ms ease-in-out;
-  background: $primaryColor;
+}
+.primary__button:hover {
+  transition: 300ms ease-in-out;
+  box-shadow: rgba(10, 39, 81, 0.5);
 }

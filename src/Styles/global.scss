@@ -16,7 +16,72 @@ body {
   font-family: "Montserrat", sans-serif;
   background: $disabled;
 }
+.App {
+  width: 100%;
+  height: 100vh;
+  background: $disabled;
+}
 .main {
   display: flex;
   flex-direction: row;
+}
+.table__wrapper {
+  width: 100%;
+  max-width: 82%;
+  height: 100vh;
+  max-height: 850px;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  overflow: auto;
+}
+.table__container__header {
+  width: 100%;
+  min-width: fit-content;
+  background-color: $primaryColor;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 1em;
+  border-radius: 50px;
+}
+.table__container__header__entry {
+  width: fit-content;
+  min-width: 200px;
+  text-align: center;
+  font-size: 14px;
+  color: $whiteColor;
+  font-weight: bold;
+}
+.entry__info__row {
+  width: 100%;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  margin-top: 1em;
+  cursor: pointer;
+  height: 50px;
+  margin-bottom: 1em;
+  border-radius: 50px;
+  background-color: transparent;
+  border: none;
+}
+.entry__info__row:hover {
+  background: rgba(10, 39, 81, 0.1);
+}
+.entry__info__row__text {
+  font-size: 14px;
+  color: $textColor;
+  width: fit-content;
+  min-width: 200px;
+  text-align: center;
+}
+.table__wrapper__heading {
+  font-size: 22px;
+  color: $textColor;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
