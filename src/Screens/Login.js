@@ -69,10 +69,10 @@ export default function Login() {
         </svg>
         <form className="login__container__content__form">
           <div className="login__container__content__form__input">
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" required />
           </div>
           <div className="login__container__content__form__input">
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" required />
           </div>
           <div className="login__container__content__form__checkbox">
             <input
