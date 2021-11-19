@@ -1,0 +1,12 @@
+@import "./global.scss";
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2em 1em;
+  margin-bottom: 1em;
+}
+.header__container svg {
+  width: 180px;
+  height: 48px;
+}

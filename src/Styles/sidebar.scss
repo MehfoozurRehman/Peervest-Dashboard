@@ -54,6 +54,7 @@
   span {
   color: $whiteColor;
 }
+
 .sidebar__container__content__entry__input:checked
   ~ .nav__bar__content__link__content {
   background: $primaryColor;
@@ -70,10 +71,6 @@
   .nav__bar__content__link__content
   span {
   color: $whiteColor;
-}
-.sidebar__container__content__entry__input:checked
-  ~ .sidebar__container__content__entry {
-  background-color: $primaryColor;
 }
 .sidebar__container__content__bottom__line {
   width: 80%;
