@@ -89,3 +89,22 @@ body {
   width: 38px;
   height: 38px;
 }
+.entry__info__row__text a {
+  position: relative;
+  color: $secondaryColor;
+  cursor: pointer;
+}
+.entry__info__row__text__message {
+  position: absolute;
+  background: $whiteColor;
+  border: 1px solid $disabled;
+  padding: 1em;
+  width: 210px;
+  color: $textColor;
+  border-radius: 10px;
+  display: none;
+  z-index: 4;
+}
+.entry__info__row__text a:hover .entry__info__row__text__message {
+  display: flex;
+}

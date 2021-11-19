@@ -23,6 +23,18 @@ function EntryInfoRowData({ value, variant, placeholder, path }) {
         />
       </div>
     );
+  } else if (variant === "message") {
+    return (
+      <div className="entry__info__row__text">
+        <a href="">
+          {value}
+          <div className="entry__info__row__text__message">
+            Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm
+            Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm
+          </div>
+        </a>
+      </div>
+    );
   } else if (variant === "img") {
     return (
       <div className="entry__info__row__text">
@@ -34,18 +46,11 @@ function EntryInfoRowData({ value, variant, placeholder, path }) {
       </div>
     );
   } else {
-    return (
-      <div
-        className="entry__info__row__text"
-        style={value === "Pending" ? { color: "#FB6A3B" } : null}
-      >
-        {value}
-      </div>
-    );
+    return <div className="entry__info__row__text">{value}</div>;
   }
 }
 
-export default function TableEntryRows({ tableEntryInfoRow, path }) {
+export default function TableEntryRows({ tableEntryInfoRow }) {
   return (
     <div className="entry__info__row">
       {tableEntryInfoRow.map((item, i) => (
@@ -59,6 +64,8 @@ export default function TableEntryRows({ tableEntryInfoRow, path }) {
               ? "btn_primary"
               : item.type === "img"
               ? "img"
+              : item.type === "message"
+              ? "message"
               : null
           }
           placeholder={item.placeholder}

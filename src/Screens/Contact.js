@@ -21,7 +21,7 @@ export default function Contact() {
     { info: "1-4-2001" },
     { info: "Male" },
     { info: "0320-2332134" },
-    { info: "<5 Year" },
+    { info: "View Message", type: "message" },
     { placeholder: "Delete", type: "btn_secondary" },
   ];
   return (
