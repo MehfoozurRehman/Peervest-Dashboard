@@ -90,7 +90,11 @@ export default function Login() {
               Remember Me
             </label>
           </div>
-          <Button placeholder="Login" className="primary__button" />
+          <Button
+            path="/dashboard"
+            placeholder="Login"
+            className="primary__button"
+          />
         </form>
       </div>
     </div>

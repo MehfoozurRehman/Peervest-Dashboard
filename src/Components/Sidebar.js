@@ -1,14 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function NavLink({ title, svg, onChange }) {
+function NavLink({ title, svg, path, defaultChecked }) {
+  const navigate = useNavigate();
   return (
     <div className="sidebar__container__content__entry">
       <input
+        defaultChecked={defaultChecked}
         type="radio"
         name="sidebar__container__content__entry__input"
         id="sidebar__container__content__entry__input"
         className="sidebar__container__content__entry__input"
-        onChange={onChange}
+        onChange={() => {
+          navigate(path);
+        }}
       />
       <div className="nav__bar__content__link__content">
         <div className="nav__bar__content__link__content__svg__wrapper">
@@ -21,12 +26,14 @@ function NavLink({ title, svg, onChange }) {
 }
 
 export default function Sidebar() {
+  const navigate = useNavigate();
   return (
     <div className="sidebar__container">
       <div className="sidebar__container__content">
         <NavLink
           title="Dashboard"
-          onChange={() => {}}
+          path="/Dashboard"
+          defaultChecked
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,8 +83,8 @@ export default function Sidebar() {
           }
         />
         <NavLink
-          title="Title"
-          onChange={() => {}}
+          title="Investor"
+          path="/Dashboard/investor"
           svg={
             <svg
               id="Group_1013"
@@ -120,7 +127,7 @@ export default function Sidebar() {
         />
         <NavLink
           title="Startup"
-          onChange={() => {}}
+          path="/Dashboard/startup"
           svg={
             <svg
               id="Group_1014"
@@ -184,7 +191,7 @@ export default function Sidebar() {
         />
         <NavLink
           title="FAQ"
-          onChange={() => {}}
+          path="/Dashboard/faq"
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +231,7 @@ export default function Sidebar() {
         />
         <NavLink
           title="Milestones"
-          onChange={() => {}}
+          path="/Dashboard/milestones"
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +257,7 @@ export default function Sidebar() {
         />
         <NavLink
           title="Client"
-          onChange={() => {}}
+          path="/Dashboard/client"
           svg={
             <svg
               id="Group_1012"
@@ -293,7 +300,7 @@ export default function Sidebar() {
         />
         <NavLink
           title="Contact"
-          onChange={() => {}}
+          path="/Dashboard/contact"
           svg={
             <svg
               id="Group_1011"
@@ -314,7 +321,12 @@ export default function Sidebar() {
           }
         />
         <div className="sidebar__container__content__bottom__line"></div>
-        <button className="sidebar__container__content__logout">
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+          className="sidebar__container__content__logout"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="29.81"
