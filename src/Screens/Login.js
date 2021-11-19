@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Components/Button";
+import InputBox from "../Components/InputBox";
 
 export default function Login() {
   return (
@@ -69,12 +70,8 @@ export default function Login() {
           </g>
         </svg>
         <form className="login__container__content__form">
-          <div className="login__container__content__form__input">
-            <input type="email" placeholder="Email" required />
-          </div>
-          <div className="login__container__content__form__input">
-            <input type="password" placeholder="Password" required />
-          </div>
+          <InputBox type="email" placeholder="Email" />
+          <InputBox type="password" placeholder="Password" />
           <div className="login__container__content__form__checkbox">
             <input
               className="styled-checkbox"
