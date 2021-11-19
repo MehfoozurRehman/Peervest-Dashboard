@@ -14,7 +14,6 @@ function NavLink({ title, svg, onChange }) {
         <div className="nav__bar__content__link__content__svg__wrapper">
           {svg}
         </div>
-
         <span>{title}</span>
       </div>
     </div>
