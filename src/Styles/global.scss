@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   background: $disabled;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #root {
   width: 100vw;
@@ -28,14 +28,12 @@ body {
   height: 90%;
 }
 .main__container {
-  width: 100%;
-  flex: 1;
-  height: 100%;
   background: white;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   padding: 2em;
+  width: 100%;
   margin-right: 2em;
 }
 .main__container__header {
@@ -45,15 +43,29 @@ body {
   align-items: center;
   margin-bottom: 1em;
 }
+.main__container__header__heading {
+  font-size: 20px;
+  font-weight: bold;
+}
 .main__container__content {
   overflow-x: auto;
-  overflow-y: hidden;
-  background-color: #0a2751;
+  overflow-y: auto;
+  max-width: 100%;
+  max-height: 98%;
+}
+.main__container__content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.main__container__content::-webkit-scrollbar-thumb {
+  background-color: #d39844;
+}
+.main__container__content::-webkit-scrollbar-track {
+  background-color: white;
 }
 .main__container__content__table {
-  width: fit-content;
-  min-height: 100%;
-  overflow: auto;
+  max-height: 100%;
+  max-width: 900px;
 }
 .table__container__header {
   width: 100%;
@@ -61,15 +73,15 @@ body {
   background-color: $primaryColor;
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 40px;
   margin-bottom: 1em;
   border-radius: 50px;
 }
 .table__container__header__entry {
   width: fit-content;
-  min-width: 180px;
+  min-width: 150px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color: $whiteColor;
   font-weight: bold;
 }
@@ -82,7 +94,7 @@ body {
   border-radius: 30px;
   margin-top: 1em;
   cursor: pointer;
-  height: 50px;
+  height: 40px;
   margin-bottom: 1em;
   border-radius: 50px;
   background-color: transparent;
@@ -92,10 +104,10 @@ body {
   background: rgba(10, 39, 81, 0.1);
 }
 .entry__info__row__text {
-  font-size: 14px;
+  font-size: 12px;
   color: $textColor;
   width: fit-content;
-  min-width: 180px;
+  min-width: 150px;
   text-align: center;
 }
 .table__wrapper__heading {
