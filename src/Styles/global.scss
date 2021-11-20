@@ -188,7 +188,7 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 9999;
+  z-index: 999;
   height: 100vh;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
@@ -199,10 +199,10 @@ body {
   flex-direction: column;
   width: 400px;
   height: fit-content;
-  padding: 1.5em;
   background: $whiteColor;
   border-radius: 20px;
   border: 1px solid $primaryColor;
+  padding: 2em;
 }
 .popup__container__form__header {
   display: flex;

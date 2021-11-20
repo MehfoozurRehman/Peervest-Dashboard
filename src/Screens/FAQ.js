@@ -26,7 +26,7 @@ export default function Startup({ closeOnClick }) {
     {
       placeholder: "Edit",
       type: "btn_secondary",
-      onclick: { closeOnClick },
+      path: "/dashboard",
     },
     {
       placeholder: "Delete",

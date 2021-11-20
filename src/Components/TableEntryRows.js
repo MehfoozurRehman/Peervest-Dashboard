@@ -2,12 +2,12 @@ import React from "react";
 import Button from "./Button";
 import tableEntryPic from "../Assets/tableEntryPic.png";
 
-function EntryInfoRowData({ value, variant, placeholder, onclick, label }) {
+function EntryInfoRowData({ value, variant, placeholder, path, label }) {
   if (variant === "btn_primary") {
     return (
       <div className="entry__info__row__text">
         <Button
-          onclick={onclick}
+          path={path}
           placeholder={placeholder}
           className="primary__button"
         />
@@ -17,9 +17,7 @@ function EntryInfoRowData({ value, variant, placeholder, onclick, label }) {
     return (
       <div className="entry__info__row__text">
         <Button
-          onclick={() => {
-            onclick(true);
-          }}
+          path={path}
           placeholder={placeholder}
           className="secondary__button"
         />
@@ -68,7 +66,7 @@ export default function TableEntryRows({ tableEntryInfoRow }) {
               : null
           }
           placeholder={item.placeholder}
-          onclick={item.onclick}
+          path={item.path}
           label={item.label}
         />
       ))}

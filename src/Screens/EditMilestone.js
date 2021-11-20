@@ -1,8 +1,7 @@
 import React from "react";
-import Button from "../Components/Button";
 import InputBox from "../Components/InputBox";
 
-export default function AddQuestion({ closeOnClick }) {
+export default function EditMilestone({ closeOnClick }) {
   return (
     <div className="popup__container">
       <form action="" className="popup__container__form">
@@ -49,15 +48,10 @@ export default function AddQuestion({ closeOnClick }) {
             </svg>
           </button>
         </div>
-        <div className="popup__container__form__heading">Question</div>
-        <InputBox placeholder="Branch" type="text" />
-        <div className="popup__container__form__heading">Answer</div>
-        <textarea
-          cols="30"
-          rows="6"
-          placeholder="Branch"
-          className="table__details__container__text__box__input"
-        />
+        <div className="popup__container__form__heading">Title</div>
+        <InputBox placeholder="Title" type="text" />
+        <div className="popup__container__form__heading">Value</div>
+        <InputBox placeholder="Value" type="text" />
         <button
           onClick={() => {
             closeOnClick(false);
