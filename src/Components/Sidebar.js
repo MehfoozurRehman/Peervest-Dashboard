@@ -321,37 +321,35 @@ export default function Sidebar() {
           }
         />
         <div className="sidebar__container__content__bottom__line"></div>
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-          className="sidebar__container__content__logout"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="29.81"
-            height="28.805"
-            viewBox="0 0 29.81 28.805"
-          >
-            <g id="loguot" transform="translate(29.81 28.805) rotate(180)">
-              <path
-                id="Path_31"
-                data-name="Path 31"
-                d="M0,7.479H13.665l-3.457,3.127,1.677,1.854,6.89-6.23L11.885,0,10.208,1.854l3.457,3.126H0Z"
-                transform="translate(0 8.173)"
-                fill="#3a3a3a"
-              />
-              <path
-                id="Path_32"
-                data-name="Path 32"
-                d="M24.313,0H0V6.1H2.5V2.5H21.813V26.3H2.5v-3.66H0V28.8H24.313Z"
-                transform="translate(5.496)"
-                fill="#3a3a3a"
-              />
-            </g>
-          </svg>
-          <span>Logout</span>
-        </button>
+
+        <NavLink
+          title="Logout"
+          path="/"
+          svg={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="29.81"
+              height="28.805"
+              viewBox="0 0 29.81 28.805"
+              fill="#fff"
+            >
+              <g id="loguot" transform="translate(29.81 28.805) rotate(180)">
+                <path
+                  id="Path_31"
+                  data-name="Path 31"
+                  d="M0,7.479H13.665l-3.457,3.127,1.677,1.854,6.89-6.23L11.885,0,10.208,1.854l3.457,3.126H0Z"
+                  transform="translate(0 8.173)"
+                />
+                <path
+                  id="Path_32"
+                  data-name="Path 32"
+                  d="M24.313,0H0V6.1H2.5V2.5H21.813V26.3H2.5v-3.66H0V28.8H24.313Z"
+                  transform="translate(5.496)"
+                />
+              </g>
+            </svg>
+          }
+        />
       </div>
     </div>
   );
