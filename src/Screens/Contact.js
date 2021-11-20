@@ -27,7 +27,7 @@ export default function Contact() {
       label:
         "Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm",
     },
-    { placeholder: "Delete", type: "btn_secondary" },
+    { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (
     <div className="main__container">

@@ -26,7 +26,7 @@ export default function Startup() {
       type: "btn_secondary",
       path: "/Dashboard/startup-details",
     },
-    { placeholder: "Delete", type: "btn_primary" },
+    { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (
     <div className="main__container">

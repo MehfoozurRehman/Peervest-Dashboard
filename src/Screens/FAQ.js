@@ -29,7 +29,7 @@ export default function Startup() {
     {
       placeholder: "Delete",
       type: "btn_primary",
-      path: "/",
+      path: "/dashboard",
     },
   ];
   return (
