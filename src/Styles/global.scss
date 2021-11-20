@@ -231,3 +231,49 @@ body {
 .popup__container__form__close__btn:hover {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
+.panel__container__form__input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.panel__container__form__input__field {
+  flex: 1;
+  height: 40px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 0em 1em;
+  color: white;
+  font-size: 14px;
+}
+.panel__container__form__input__pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid $disabled;
+  position: relative;
+  margin-right: 1em;
+}
+.panel__container__form__input__file {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  user-select: none;
+  cursor: pointer;
+}
+.panel__container__form__input__pic__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel__container__form__input__pic__content__img {
+  width: 100%;
+  height: fit-content;
+}

@@ -13,6 +13,7 @@ import Contact from "./Screens/Contact";
 import Milestones from "./Screens/Milestones";
 import AddQuestion from "./Screens/AddQuestion";
 import EditMilestone from "./Screens/EditMilestone";
+import EditClient from "./Screens/EditClient";
 
 function Main() {
   return (
@@ -28,13 +29,15 @@ function Main() {
 
 function App() {
   const [isAddQuestion, setIsAddQuestion] = useState(false);
-  const [isEditMileston, setIsEditMileston] = useState(true);
+  const [isEditMileston, setIsEditMileston] = useState(false);
+  const [isEditClient, setIsEditClient] = useState(true);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
       {isEditMileston ? (
         <EditMilestone closeOnClick={setIsEditMileston} />
       ) : null}
+      {isEditClient ? <EditClient closeOnClick={setIsEditClient} /> : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Main />}>
