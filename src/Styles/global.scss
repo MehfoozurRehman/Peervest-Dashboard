@@ -141,8 +141,43 @@ body {
 }
 .main__container__sub__heading {
   display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.main__container__sub__heading__btn {
+  border: none;
+  display: flex;
+  background: transparent;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.main__container__sub__heading__btn:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 300ms ease-in-out;
+}
+.table__details__container__text__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  color: $secondaryColor;
+  font-size: 14px;
   font-weight: bold;
+  margin-top: 2em;
+}
+.table__details__container__text__box__input {
+  background: $disabled;
+  border-radius: 10px;
+  padding: 1em;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0.5em;
 }

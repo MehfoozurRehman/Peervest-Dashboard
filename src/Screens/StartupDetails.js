@@ -1,6 +1,9 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import startup__details__img from "../Assets/startup__details__img.png";
+import InputBox from "../Components/InputBox";
 export default function Startup() {
+  const navigate = useNavigate();
   return (
     <div className="main__container">
       <div className="main__container__header">
@@ -8,7 +11,12 @@ export default function Startup() {
         <div className="main__container__header__buttons"></div>
       </div>
       <div className="main__container__sub__heading">
-        <button className="main__container__sub__heading__btn">
+        <button
+          onClick={() => {
+            navigate("/Dashboard/startup");
+          }}
+          className="main__container__sub__heading__btn"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20.556"
@@ -34,7 +42,78 @@ export default function Startup() {
         </button>
         Startup Details
       </div>
-      <div className="main__container__content"></div>
+      <div className="main__container__content">
+        <div className="startup__details__container">
+          <div className="startup__details__container__img__wrapper">
+            <img
+              src={startup__details__img}
+              alt="startup__details__img"
+              className="startup__details__container__img"
+            />
+          </div>
+
+          <div className="startup__details__container__content">
+            <div className="startup__details__container__content__left">
+              <div className="startup__details__container__content__left__entry">
+                Name
+              </div>
+              <div className="startup__details__container__content__left__entry">
+                Website
+              </div>
+              <div className="startup__details__container__content__left__entry">
+                Start-up Industry
+              </div>
+              <div className="startup__details__container__content__left__entry">
+                Start-up Stage
+              </div>
+              <div className="startup__details__container__content__left__entry">
+                Start-up Model
+              </div>
+            </div>
+            <div className="startup__details__container__content__right">
+              <div className="startup__details__container__content__right__entry">
+                Jhon Doe
+              </div>
+              <div className="startup__details__container__content__right__entry">
+                Data Scientist, Simens
+              </div>
+              <div className="startup__details__container__content__right__entry">
+                27 Years, Male
+              </div>
+              <div className="startup__details__container__content__right__entry">
+                Amsterdam, netherlands
+              </div>
+              <div className="startup__details__container__content__right__entry">
+                Bachelors in Data Science
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="startup__details__container__text__box">
+          <div className="startup__details__container__text__box__left">
+            <InputBox
+              variant="textbox"
+              title=" What Problem Is Your Start-Up Solving?"
+            />
+            <InputBox
+              variant="textbox"
+              title=" How Is Your Start-Up Incorporating Technology?"
+            />
+          </div>
+          <div className="startup__details__container__text__box__right">
+            <InputBox
+              variant="textbox"
+              title=" Describe Your Start-Up In 2-3 Lines.
+
+              "
+            />
+            <InputBox
+              variant="textbox"
+              title=" Who Are Your Local Competitors?"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
