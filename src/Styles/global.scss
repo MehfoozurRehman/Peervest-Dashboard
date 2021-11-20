@@ -139,3 +139,10 @@ body {
 .entry__info__row__text a:hover .entry__info__row__text__message {
   display: flex;
 }
+.main__container__sub__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}

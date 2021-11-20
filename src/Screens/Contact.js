@@ -25,18 +25,25 @@ export default function Contact() {
     { placeholder: "Delete", type: "btn_secondary" },
   ];
   return (
-    <div className="table__wrapper">
-      <div className="table__wrapper__heading">Contact</div>
-      <TableEntryHeadings tableHeadingEntryRow={tableHeadingRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
-      <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+    <div className="main__container">
+      <div className="main__container__header">
+        <div className="main__container__header__heading">Contact</div>
+        <div className="main__container__header__buttons"></div>
+      </div>
+      <div className="main__container__content">
+        <div className="main__container__content__table">
+          <TableEntryHeadings tableHeadingEntryRow={tableHeadingRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+          <TableEntryRows tableEntryInfoRow={tableInfoRow} />
+        </div>
+      </div>
     </div>
   );
 }
