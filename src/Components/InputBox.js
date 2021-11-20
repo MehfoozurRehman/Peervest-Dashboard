@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function InputBox({ type, placeholder, variant, title }) {
+export default function InputBox({
+  type,
+  placeholder,
+  variant,
+  title,
+  disabled,
+}) {
   if (variant === "textbox") {
     return (
       <div className="table__details__container__text__box">
@@ -8,6 +14,7 @@ export default function InputBox({ type, placeholder, variant, title }) {
         <textarea
           cols="30"
           rows="6"
+          disabled={disabled}
           placeholder="Design"
           className="table__details__container__text__box__input"
         />

@@ -92,24 +92,26 @@ export default function Startup() {
         <div className="startup__details__container__text__box">
           <div className="startup__details__container__text__box__left">
             <InputBox
+              disabled
               variant="textbox"
               title=" What Problem Is Your Start-Up Solving?"
             />
             <InputBox
+              disabled
               variant="textbox"
-              title=" How Is Your Start-Up Incorporating Technology?"
+              title=" What Problem Is Your Start-Up Solving?"
             />
           </div>
           <div className="startup__details__container__text__box__right">
             <InputBox
               variant="textbox"
-              title=" Describe Your Start-Up In 2-3 Lines.
-
-              "
+              disabled
+              title=" What Problem Is Your Start-Up Solving?"
             />
             <InputBox
               variant="textbox"
-              title=" Who Are Your Local Competitors?"
+              disabled
+              title=" What Problem Is Your Start-Up Solving?"
             />
           </div>
         </div>
