@@ -32,7 +32,7 @@ function App() {
   const [isAddQuestion, setIsAddQuestion] = useState(false);
   const [isEditMileston, setIsEditMileston] = useState(false);
   const [isEditClient, setIsEditClient] = useState(false);
-  const [isAddClient, setIsAddClient] = useState(true);
+  const [isAddClient, setIsAddClient] = useState(false);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
