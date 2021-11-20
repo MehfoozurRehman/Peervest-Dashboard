@@ -3,9 +3,11 @@ import Button from "../Components/Button";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
-export default function Startup() {
+export default function Startup({ closeOnClick }) {
   const tableHeadingRow = [
     { heading: "Question" },
+    { heading: "" },
+    { heading: "" },
     { heading: "Answer" },
     { heading: "" },
     { heading: "" },
@@ -24,7 +26,7 @@ export default function Startup() {
     {
       placeholder: "Edit",
       type: "btn_secondary",
-      path: "/",
+      onclick: { closeOnClick },
     },
     {
       placeholder: "Delete",

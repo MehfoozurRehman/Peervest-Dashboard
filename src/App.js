@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
@@ -11,6 +11,7 @@ import Client from "./Screens/Client";
 import FAQ from "./Screens/FAQ";
 import Contact from "./Screens/Contact";
 import Milestones from "./Screens/Milestones";
+import AddQuestion from "./Screens/AddQuestion";
 
 function Main() {
   return (
@@ -25,8 +26,10 @@ function Main() {
 }
 
 function App() {
+  const [isAddQuestion, setIsAddQuestion] = useState(true);
   return (
     <BrowserRouter>
+      {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Main />}>

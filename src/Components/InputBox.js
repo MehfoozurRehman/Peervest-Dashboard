@@ -6,6 +6,7 @@ export default function InputBox({
   variant,
   title,
   disabled,
+  style,
 }) {
   if (variant === "textbox") {
     return (
@@ -16,6 +17,7 @@ export default function InputBox({
           rows="6"
           disabled={disabled}
           placeholder="Design"
+          style={style}
           className="table__details__container__text__box__input"
         />
       </div>

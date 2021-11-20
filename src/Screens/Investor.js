@@ -24,7 +24,7 @@ export default function Investor() {
     { info: "Fintech" },
     { info: "B2B" },
     { info: "<5 Year" },
-    { placeholder: "Delete", type: "btn_secondary", path: "/dashboard" },
+    { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (
     <div className="main__container">
