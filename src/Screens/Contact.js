@@ -21,7 +21,12 @@ export default function Contact() {
     { info: "1-4-2001" },
     { info: "Male" },
     { info: "0320-2332134" },
-    { info: "View Message", type: "message" },
+    {
+      info: "View Message",
+      type: "message",
+      label:
+        "Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm",
+    },
     { placeholder: "Delete", type: "btn_secondary" },
   ];
   return (

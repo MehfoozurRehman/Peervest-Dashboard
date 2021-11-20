@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import tableEntryPic from "../Assets/tableEntryPic.png";
 
-function EntryInfoRowData({ value, variant, placeholder, path }) {
+function EntryInfoRowData({ value, variant, placeholder, path, label }) {
   if (variant === "btn_primary") {
     return (
       <div className="entry__info__row__text">
@@ -28,10 +28,7 @@ function EntryInfoRowData({ value, variant, placeholder, path }) {
       <div className="entry__info__row__text">
         <a href="">
           {value}
-          <div className="entry__info__row__text__message">
-            Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm
-            Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm Lorem Ipsm
-          </div>
+          <div className="entry__info__row__text__message">{label}</div>
         </a>
       </div>
     );
@@ -70,6 +67,7 @@ export default function TableEntryRows({ tableEntryInfoRow }) {
           }
           placeholder={item.placeholder}
           path={item.path}
+          label={item.label}
         />
       ))}
     </div>

@@ -30,7 +30,11 @@ export default function Startup() {
       <div className="main__container__header">
         <div className="main__container__header__heading">Client</div>
         <div className="main__container__header__buttons">
-          <Button placeholder="Add Client" className="primary__button" />
+          <Button
+            placeholder="Add Client"
+            className="primary__button"
+            path="/"
+          />
         </div>
       </div>
       <div className="main__container__content">
