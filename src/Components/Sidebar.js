@@ -29,7 +29,7 @@ export default function Sidebar() {
   const navigate = useNavigate();
   return (
     <div className="sidebar__container">
-      <div className="sidebar__container__content">
+      <div className="sidebar__container__links">
         <NavLink
           title="Dashboard"
           path="/Dashboard"
@@ -320,8 +320,9 @@ export default function Sidebar() {
             </svg>
           }
         />
-        <div className="sidebar__container__content__bottom__line"></div>
-
+      </div>
+      <div>
+        <div className="sidebar__container__line"></div>
         <NavLink
           title="Logout"
           path="/"

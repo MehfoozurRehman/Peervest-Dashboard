@@ -46,8 +46,10 @@
   border: 1px solid $disabled;
   border-radius: 6px;
   margin-bottom: 1em;
+  font-size: 12px;
 }
 .login__container__content__form__input input:hover {
+  transition: 300ms ease-in-out;
   border-color: #b4b8c0;
 }
 .login__container__content__form__input input:focus {
@@ -128,21 +130,21 @@
 .primary__button {
   flex: 1;
   padding: 0.8em 2em;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   background: $primaryColor;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 .secondary__button {
   background: $secondaryColor;
   flex: 1;
   padding: 0.8em 2em;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 .secondary__button:hover {

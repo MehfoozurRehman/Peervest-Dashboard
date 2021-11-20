@@ -27,21 +27,19 @@ function Main() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Main />}>
-            <Route path="" element={<Dashboard />} />
-            <Route path="investor" element={<Investor />} />
-            <Route path="startup" element={<Startup />} />
-            <Route path="startup-details" element={<StartupDetails />} />
-            <Route path="client" element={<Client />} />
-            <Route path="faq" element={<FAQ />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="milestones" element={<Milestones />} />
-          </Route>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Main />}>
+          <Route path="" element={<Dashboard />} />
+          <Route path="investor" element={<Investor />} />
+          <Route path="startup" element={<Startup />} />
+          <Route path="startup-details" element={<StartupDetails />} />
+          <Route path="client" element={<Client />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="milestones" element={<Milestones />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
