@@ -35,7 +35,7 @@ function NotificationPanel() {
 }
 
 export default function Header() {
-  const [notificationOpen, setNotificationOpen] = useState(true);
+  const [notificationOpen, setNotificationOpen] = useState(false);
   return (
     <div className="header__container">
       <Link to="/dashboard" className="header__container__logo">
