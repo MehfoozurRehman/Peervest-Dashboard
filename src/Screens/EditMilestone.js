@@ -6,7 +6,7 @@ export default function EditMilestone({ closeOnClick }) {
     <div className="popup__container">
       <form action="" className="popup__container__form">
         <div className="popup__container__form__header">
-          <div></div>
+          <div>Edit Milestone</div>
           <button
             onClick={() => {
               closeOnClick(false);

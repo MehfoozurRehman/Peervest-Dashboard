@@ -6,7 +6,7 @@ export default function AddClient({ closeOnClick }) {
     <div className="popup__container">
       <form action="" className="popup__container__form">
         <div className="popup__container__form__header">
-          <div></div>
+          <div>Add Client</div>
           <button
             onClick={() => {
               closeOnClick(false);

@@ -7,7 +7,7 @@ export default function AddQuestion({ closeOnClick }) {
     <div className="popup__container">
       <form action="" className="popup__container__form">
         <div className="popup__container__form__header">
-          <div></div>
+          <div>Add Question</div>
           <button
             onClick={() => {
               closeOnClick(false);

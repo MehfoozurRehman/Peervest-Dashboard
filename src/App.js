@@ -15,6 +15,7 @@ import AddQuestion from "./Screens/AddQuestion";
 import EditMilestone from "./Screens/EditMilestone";
 import EditClient from "./Screens/EditClient";
 import AddClient from "./Screens/AddClient";
+import EditQuestion from "./Screens/EditQuestion";
 
 function Main() {
   return (
@@ -30,12 +31,16 @@ function Main() {
 
 function App() {
   const [isAddQuestion, setIsAddQuestion] = useState(false);
+  const [isEditQuestion, setIsEditQuestion] = useState(false);
   const [isEditMileston, setIsEditMileston] = useState(false);
   const [isEditClient, setIsEditClient] = useState(false);
   const [isAddClient, setIsAddClient] = useState(false);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
+      {isEditQuestion ? (
+        <EditQuestion closeOnClick={setIsEditQuestion} />
+      ) : null}
       {isEditMileston ? (
         <EditMilestone closeOnClick={setIsEditMileston} />
       ) : null}
@@ -48,10 +53,29 @@ function App() {
           <Route path="investor" element={<Investor />} />
           <Route path="startup" element={<Startup />} />
           <Route path="startup-details" element={<StartupDetails />} />
-          <Route path="client" element={<Client />} />
-          <Route path="faq" element={<FAQ />} />
+          <Route
+            path="client"
+            element={
+              <Client
+                setIsEditClient={setIsEditClient}
+                setIsAddClient={setIsAddClient}
+              />
+            }
+          />
+          <Route
+            path="faq"
+            element={
+              <FAQ
+                setIsAddQuestion={setIsAddQuestion}
+                setIsEditQuestion={setIsEditQuestion}
+              />
+            }
+          />
           <Route path="contact" element={<Contact />} />
-          <Route path="milestones" element={<Milestones />} />
+          <Route
+            path="milestones"
+            element={<Milestones setIsEditMileston={setIsEditMileston} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -3,7 +3,7 @@ import Button from "../Components/Button";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
-export default function Startup({ closeOnClick }) {
+export default function FAQ({ setIsAddQuestion, setIsEditQuestion }) {
   const tableHeadingRow = [
     { heading: "Question" },
     { heading: "" },
@@ -26,12 +26,12 @@ export default function Startup({ closeOnClick }) {
     {
       placeholder: "Edit",
       type: "btn_secondary",
-      path: "/dashboard",
+      onClick: setIsEditQuestion,
     },
     {
       placeholder: "Delete",
       type: "btn_primary",
-      path: "/dashboard",
+      onClick: () => {},
     },
   ];
   return (
@@ -42,7 +42,7 @@ export default function Startup({ closeOnClick }) {
           <Button
             placeholder="Add Question"
             className="primary__button"
-            path="/"
+            onClick={setIsAddQuestion}
           />
         </div>
       </div>

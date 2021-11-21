@@ -3,7 +3,7 @@ import Button from "../Components/Button";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
-export default function Startup() {
+export default function Client({ setIsEditClient, setIsAddClient }) {
   const tableHeadingRow = [
     { heading: "Client Image" },
     { heading: "Client Name" },
@@ -17,12 +17,12 @@ export default function Startup() {
     {
       placeholder: "Edit",
       type: "btn_secondary",
-      path: "/",
+      onClick: setIsEditClient,
     },
     {
       placeholder: "Delete",
       type: "btn_primary",
-      path: "/",
+      onClick: () => {},
     },
   ];
   return (
@@ -33,7 +33,7 @@ export default function Startup() {
           <Button
             placeholder="Add Client"
             className="primary__button"
-            path="/"
+            onClick={setIsAddClient}
           />
         </div>
       </div>

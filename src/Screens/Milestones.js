@@ -2,7 +2,7 @@ import React from "react";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
-export default function Startup() {
+export default function Milestones({ setIsEditMileston }) {
   const tableHeadingRow = [
     { heading: "Title" },
     { heading: "Value" },
@@ -15,7 +15,7 @@ export default function Startup() {
     {
       placeholder: "Edit",
       type: "btn_secondary",
-      path: "/",
+      onClick: setIsEditMileston,
     },
   ];
   return (

@@ -1,12 +1,13 @@
 import React from "react";
+import Button from "../Components/Button";
 import InputBox from "../Components/InputBox";
 
-export default function EditClient({ closeOnClick }) {
+export default function EditQuestion({ closeOnClick }) {
   return (
     <div className="popup__container">
       <form action="" className="popup__container__form">
         <div className="popup__container__form__header">
-          <div>Edit Client</div>
+          <div>Edit Question</div>
           <button
             onClick={() => {
               closeOnClick(false);
@@ -48,10 +49,15 @@ export default function EditClient({ closeOnClick }) {
             </svg>
           </button>
         </div>
-        <div className="popup__container__form__heading">Client Name</div>
-        <InputBox placeholder="Title" type="text" />
-        <div className="popup__container__form__heading">Upload Image</div>
-        <InputBox variant="upload" />
+        <div className="popup__container__form__heading">Question</div>
+        <InputBox placeholder="Branch" type="text" />
+        <div className="popup__container__form__heading">Answer</div>
+        <textarea
+          cols="30"
+          rows="6"
+          placeholder="Branch"
+          className="table__details__container__text__box__input"
+        />
         <button
           onClick={() => {
             closeOnClick(false);
