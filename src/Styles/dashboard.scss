@@ -211,13 +211,16 @@
   overflow-y: auto;
   padding-right: 0.5em;
 }
+.notification__panel__content::-webkit-scrollbar,
 .recent__panel__content::-webkit-scrollbar {
   width: 5px;
 }
+.notification__panel__content::-webkit-scrollbar-thumb,
 .recent__panel__content::-webkit-scrollbar-thumb {
   background-color: #d39844;
   border-radius: 50px;
 }
+.notification__panel__content::-webkit-scrollbar-track,
 .recent__panel__content::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 50px;
@@ -265,5 +268,8 @@
 @media (max-width: 1440px) {
   .dashboard__container__col:last-child {
     display: none;
+  }
+  .dashboard__container__col:nth-child(2) {
+    margin-right: 0em;
   }
 }
