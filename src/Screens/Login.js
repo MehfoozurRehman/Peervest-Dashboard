@@ -18,14 +18,14 @@ export default function Login() {
             transform="translate(1422.524 -1010.94)"
           >
             <text
-              id="PEERWEST"
+              id="PEERVEST"
               transform="translate(-1352.259 1037.94)"
               fill="#0a264e"
               font-size="28"
               font-family="CenturyGothic, Century Gothic"
             >
               <tspan x="0" y="0">
-                PEERWEST
+                PEERVEST
               </tspan>
             </text>
             <text
