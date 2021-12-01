@@ -2,7 +2,7 @@ import React from "react";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
-export default function Investor() {
+export default function Investor({ setIsAddInvestor, setIsEditInvestor }) {
   const tableHeadingRow = [
     { heading: "Name" },
     { heading: "Email" },
@@ -26,8 +26,8 @@ export default function Investor() {
     { info: "Fintech" },
     { info: "B2B" },
     { info: "<5 Year" },
-    { placeholder: "Add", type: "btn_primary", path: "/dashboard" },
-    { placeholder: "Edit", type: "btn_primary", path: "/dashboard" },
+    { placeholder: "Add", type: "btn_secondary", onClick: setIsAddInvestor },
+    { placeholder: "Edit", type: "btn_primary", onClick: setIsEditInvestor },
     // { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (

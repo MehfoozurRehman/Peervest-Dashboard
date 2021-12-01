@@ -38,7 +38,7 @@ function App() {
   const [isEditClient, setIsEditClient] = useState(false);
   const [isAddClient, setIsAddClient] = useState(false);
   const [isEditInvestor, setIsEditInvestor] = useState(false);
-  const [isAddInvestor, setIsAddInvestor] = useState(true);
+  const [isAddInvestor, setIsAddInvestor] = useState(false);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
@@ -58,7 +58,15 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Main />}>
           <Route path="" element={<Dashboard />} />
-          <Route path="investor" element={<Investor />} />
+          <Route
+            path="investor"
+            element={
+              <Investor
+                setIsAddInvestor={setIsAddInvestor}
+                setIsEditInvestor={setIsEditInvestor}
+              />
+            }
+          />
           <Route path="startup" element={<Startup />} />
           <Route path="startup-details" element={<StartupDetails />} />
           <Route
