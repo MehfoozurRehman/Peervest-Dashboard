@@ -38,7 +38,15 @@ export default function Header() {
   const [notificationOpen, setNotificationOpen] = useState(false);
   return (
     <div className="header__container">
-      <Link to="/dashboard" className="header__container__logo">
+      <Link
+        to="/dashboard"
+        className="header__container__logo"
+        onClick={() => {
+          document.getElementById(
+            "sidebar__container__content__entry__input__1"
+          ).checked = true;
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="202.265"

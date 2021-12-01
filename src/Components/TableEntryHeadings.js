@@ -1,7 +1,14 @@
 import React from "react";
 
 function EntryHeadingData({ value }) {
-  return <div className="table__container__header__entry">{value}</div>;
+  return (
+    <div
+      className="table__container__header__entry"
+      style={value === "" ? { maxWidth: "10px", minWidth: 100 } : null}
+    >
+      {value}
+    </div>
+  );
 }
 export default function TableEntryHeadings({ tableHeadingEntryRow }) {
   return (

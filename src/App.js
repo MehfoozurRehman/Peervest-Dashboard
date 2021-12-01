@@ -18,6 +18,9 @@ import AddClient from "./Screens/AddClient";
 import EditQuestion from "./Screens/EditQuestion";
 import EditInvestor from "./Screens/EditInvestor";
 import AddInvestor from "./Screens/AddInvestor";
+import AddStartup from "./Screens/AddStartup";
+import EditStartup from "./Screens/EditStartup";
+import AddMilestone from "./Screens/AddMilestone";
 
 function Main() {
   return (
@@ -34,19 +37,25 @@ function Main() {
 function App() {
   const [isAddQuestion, setIsAddQuestion] = useState(false);
   const [isEditQuestion, setIsEditQuestion] = useState(false);
-  const [isEditMileston, setIsEditMileston] = useState(false);
+  const [isEditMilestone, setIsEditMilestone] = useState(false);
+  const [isAddMilestone, setIsAddMilestone] = useState(false);
   const [isEditClient, setIsEditClient] = useState(false);
   const [isAddClient, setIsAddClient] = useState(false);
   const [isEditInvestor, setIsEditInvestor] = useState(false);
   const [isAddInvestor, setIsAddInvestor] = useState(false);
+  const [isAddStartup, setIsAddStartup] = useState(false);
+  const [isEditStartup, setIsEditStartup] = useState(false);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
       {isEditQuestion ? (
         <EditQuestion closeOnClick={setIsEditQuestion} />
       ) : null}
-      {isEditMileston ? (
-        <EditMilestone closeOnClick={setIsEditMileston} />
+      {isAddMilestone ? (
+        <AddMilestone closeOnClick={setIsAddMilestone} />
+      ) : null}
+      {isEditMilestone ? (
+        <EditMilestone closeOnClick={setIsEditMilestone} />
       ) : null}
       {isEditClient ? <EditClient closeOnClick={setIsEditClient} /> : null}
       {isAddClient ? <AddClient closeOnClick={setIsAddClient} /> : null}
@@ -54,6 +63,8 @@ function App() {
         <EditInvestor closeOnClick={setIsEditInvestor} />
       ) : null}
       {isAddInvestor ? <AddInvestor closeOnClick={setIsAddInvestor} /> : null}
+      {isAddStartup ? <AddStartup closeOnClick={setIsAddStartup} /> : null}
+      {isEditStartup ? <EditStartup closeOnClick={setIsEditStartup} /> : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Main />}>
@@ -67,7 +78,15 @@ function App() {
               />
             }
           />
-          <Route path="startup" element={<Startup />} />
+          <Route
+            path="startup"
+            element={
+              <Startup
+                setIsAddStartup={setIsAddStartup}
+                setIsEditStartup={setIsEditStartup}
+              />
+            }
+          />
           <Route path="startup-details" element={<StartupDetails />} />
           <Route
             path="client"
@@ -90,7 +109,12 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route
             path="milestones"
-            element={<Milestones setIsEditMileston={setIsEditMileston} />}
+            element={
+              <Milestones
+                setIsEditMilestone={setIsEditMilestone}
+                setIsAddMilestone={setIsAddMilestone}
+              />
+            }
           />
         </Route>
       </Routes>

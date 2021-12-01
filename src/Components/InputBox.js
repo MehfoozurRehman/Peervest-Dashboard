@@ -9,6 +9,7 @@ export default function InputBox({
   disabled,
   style,
   label,
+  options,
 }) {
   const [uploadedImg, setUploadedImg] = useState(false);
   if (variant === "textbox") {
@@ -78,6 +79,24 @@ export default function InputBox({
             )}
           </div>
         </div>
+      </div>
+    );
+  } else if (variant === "select") {
+    return (
+      <div className="login__container__content__form__input">
+        <input
+          type={type}
+          placeholder={placeholder}
+          list="browsers"
+          name="browser"
+          id="browser"
+          required
+        />
+        <datalist id="browsers">
+          {options.map((option) => (
+            <option value={option.value}>{option.label}</option>
+          ))}
+        </datalist>
       </div>
     );
   } else

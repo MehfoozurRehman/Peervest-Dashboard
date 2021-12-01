@@ -65,7 +65,7 @@ body {
 }
 .main__container__content__table {
   max-height: 100%;
-  max-width: 900px;
+  max-width: 100%;
 }
 .table__container__header {
   width: 100%;
@@ -300,4 +300,9 @@ body {
   flex-direction: column;
   width: 100%;
   margin-right: 12px;
+}
+@media (max-width: 1440px) {
+  .main__container__content__table {
+    max-width: 1000px;
+  }
 }

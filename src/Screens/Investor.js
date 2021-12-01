@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Components/Button";
 import TableEntryHeadings from "../Components/TableEntryHeadings";
 import TableEntryRows from "../Components/TableEntryRows";
 
@@ -26,15 +27,23 @@ export default function Investor({ setIsAddInvestor, setIsEditInvestor }) {
     { info: "Fintech" },
     { info: "B2B" },
     { info: "<5 Year" },
-    { placeholder: "Add", type: "btn_secondary", onClick: setIsAddInvestor },
-    { placeholder: "Edit", type: "btn_primary", onClick: setIsEditInvestor },
+    { placeholder: "Edit", type: "btn_secondary", onClick: setIsEditInvestor },
+    { placeholder: "Delete", type: "btn_primary", onClick: () => {} },
     // { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (
     <div className="main__container">
       <div className="main__container__header">
         <div className="main__container__header__heading">Investor</div>
-        <div className="main__container__header__buttons"></div>
+        <div className="main__container__header__buttons">
+          <Button
+            placeholder="Add Investor"
+            className="primary__button"
+            onClick={() => {
+              setIsAddInvestor(true);
+            }}
+          />
+        </div>
       </div>
       <div className="main__container__content">
         <div className="main__container__content__table">

@@ -12,7 +12,7 @@ function EntryInfoRowData({
 }) {
   if (variant === "btn_primary") {
     return (
-      <div className="entry__info__row__text">
+      <div style={{ marginRight: 10 }}>
         <Button
           path={path}
           onClick={onClick}
@@ -23,7 +23,7 @@ function EntryInfoRowData({
     );
   } else if (variant === "btn_secondary") {
     return (
-      <div className="entry__info__row__text">
+      <div style={{ marginRight: 10 }}>
         <Button
           path={path}
           onClick={onClick}

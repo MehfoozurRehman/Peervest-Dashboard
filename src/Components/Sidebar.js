@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function NavLink({ title, svg, path, defaultChecked }) {
+function NavLink({ title, svg, path, defaultChecked, id }) {
   const navigate = useNavigate();
   return (
     <div className="sidebar__container__content__entry">
@@ -9,7 +9,7 @@ function NavLink({ title, svg, path, defaultChecked }) {
         defaultChecked={defaultChecked}
         type="radio"
         name="sidebar__container__content__entry__input"
-        id="sidebar__container__content__entry__input"
+        id={id ? id : "sidebar__container__content__entry__input"}
         className="sidebar__container__content__entry__input"
         onChange={() => {
           navigate(path);
@@ -34,6 +34,7 @@ export default function Sidebar() {
           title="Dashboard"
           path="/Dashboard"
           defaultChecked
+          id="sidebar__container__content__entry__input__1"
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
