@@ -197,7 +197,8 @@ body {
 .popup__container__form {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: fit-content;
+  min-width: 400px;
   height: fit-content;
   background: $whiteColor;
   border-radius: 20px;
@@ -212,9 +213,19 @@ body {
 }
 .popup__container__form__heading {
   font-size: 14px;
+  font-weight: 500;
+  color: $textColor;
+  margin: 0.3em 0em;
+}
+.popup__container__form__header__heading {
+  font-size: 18px;
   font-weight: bold;
   color: $textColor;
-  margin: 0.6em 0em;
+}
+.popup__cta__button {
+  display: flex;
+  width: 50%;
+  margin: 0px auto;
 }
 .popup__container__form__close__btn {
   display: flex;
@@ -276,4 +287,17 @@ body {
 .panel__container__form__input__pic__content__img {
   width: 100%;
   height: fit-content;
+}
+.invester__popup__entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.invester__popup__entry__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 12px;
 }

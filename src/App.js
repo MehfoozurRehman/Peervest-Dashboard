@@ -16,6 +16,8 @@ import EditMilestone from "./Screens/EditMilestone";
 import EditClient from "./Screens/EditClient";
 import AddClient from "./Screens/AddClient";
 import EditQuestion from "./Screens/EditQuestion";
+import EditInvestor from "./Screens/EditInvestor";
+import AddInvestor from "./Screens/AddInvestor";
 
 function Main() {
   return (
@@ -35,6 +37,8 @@ function App() {
   const [isEditMileston, setIsEditMileston] = useState(false);
   const [isEditClient, setIsEditClient] = useState(false);
   const [isAddClient, setIsAddClient] = useState(false);
+  const [isEditInvestor, setIsEditInvestor] = useState(false);
+  const [isAddInvestor, setIsAddInvestor] = useState(true);
   return (
     <BrowserRouter>
       {isAddQuestion ? <AddQuestion closeOnClick={setIsAddQuestion} /> : null}
@@ -46,6 +50,10 @@ function App() {
       ) : null}
       {isEditClient ? <EditClient closeOnClick={setIsEditClient} /> : null}
       {isAddClient ? <AddClient closeOnClick={setIsAddClient} /> : null}
+      {isEditInvestor ? (
+        <EditInvestor closeOnClick={setIsEditInvestor} />
+      ) : null}
+      {isAddInvestor ? <AddInvestor closeOnClick={setIsAddInvestor} /> : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Main />}>

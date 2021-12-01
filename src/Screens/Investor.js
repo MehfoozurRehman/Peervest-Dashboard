@@ -13,6 +13,8 @@ export default function Investor() {
     { heading: "Business model" },
     { heading: "Plan" },
     { heading: "" },
+    { heading: "" },
+    // { heading: "" },
   ];
 
   const tableInfoRow = [
@@ -24,7 +26,9 @@ export default function Investor() {
     { info: "Fintech" },
     { info: "B2B" },
     { info: "<5 Year" },
-    { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
+    { placeholder: "Add", type: "btn_primary", path: "/dashboard" },
+    { placeholder: "Edit", type: "btn_primary", path: "/dashboard" },
+    // { placeholder: "Delete", type: "btn_primary", path: "/dashboard" },
   ];
   return (
     <div className="main__container">
